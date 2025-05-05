@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервис продажи билетов</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/events">Главная</a> |
+        <a href="/user/register">Регистрация</a> |
+        <a href="/user/my-tickets">Мои билеты</a> |
+        <a href="/user/my-events">Мои события</a> |
+        <a href="/events/add">Создать событие</a>
+    </nav>
+    <hr/>
+</header>
+
+<div th:replace="${content}"></div>
+
+</body>
+</html>

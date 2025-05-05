@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div>
+    <h2>Мои билеты</h2>
+    <ul>
+        <li th:each="ticket : ${tickets}">
+            <p>
+                Событие: <span th:text="${ticket.event.title}"></span><br/>
+                Дата: <span th:text="${ticket.event.date}"></span><br/>
+                Место: <span th:text="${ticket.event.location}"></span><br/>
+                Цена: <span th:text="${ticket.price}"></span>
+            </p>
+        </li>
+    </ul>
+</div>
+</html>

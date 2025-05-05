@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<div>
+    <h2>Билеты на событие</h2>
+    <ul>
+        <li th:each="ticket : ${tickets}">
+            <p>
+                Цена: <span th:text="${ticket.price}"></span> |
+                Осталось: <span th:text="${ticket.quantity}"></span>
+            </p>
+            <form method="post" th:action="@{/tickets/buy/{id}(id=${ticket.id})}">
+                <button type="submit">Купить</button>
+            </form>
+        </li>
+    </ul>
+</div>
+</html>
